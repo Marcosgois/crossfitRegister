@@ -10,12 +10,10 @@ import { AngularFirestore } from 'angularfire2/firestore';
   styleUrls: ['./table-benchmarks.component.css']
 })
 export class TableBenchmarksComponent implements OnInit {
-  public items: Observable<any[]>;
+  public benchmarks: Observable<any[]>;
 
   constructor(db: AngularFirestore) {
-      this.items = db.collection('/benchmarks').valueChanges();
-      console.log(this.items);
-      
+      this.benchmarks = db.collection('/benchmarks').valueChanges();
   }
 
   ngOnInit() {

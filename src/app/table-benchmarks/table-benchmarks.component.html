@@ -7,9 +7,9 @@
     <th>Workout</th>
     <th>Your result</th>
   </tr>
-  <tr>
-    <td *ngFor="let benchmark of benchmarks | async">
-      {{ benchmark. | json }}
-    </td>
+  <tr *ngFor="let benchmark of benchmarks | async">
+    <td>{{ benchmark.reps | json }}</td>
+    <td>{{ benchmark.moviments | json }}</td>
+
   </tr>
 </table>
