@@ -1,0 +1,15 @@
+<p>
+  table-benchmarks works!
+</p>
+<table>
+  <tr>
+    <th>Girl</th>
+    <th>Workout</th>
+    <th>Your result</th>
+  </tr>
+  <tr>
+    <td *ngFor="let benchmark of benchmarks | async">
+      {{ benchmark. | json }}
+    </td>
+  </tr>
+</table>
