@@ -1,23 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireModule } from 'angularfire2';
-
 import { AppComponent } from './app.component';
-import { TableBenchmarksComponent } from './table-benchmarks/table-benchmarks.component';
 import { environment } from '../environments/environment';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { BenchmarkDashboardComponent } from './benchmark-dashboard/benchmark-dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableBenchmarksComponent
+    BenchmarkDashboardComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
